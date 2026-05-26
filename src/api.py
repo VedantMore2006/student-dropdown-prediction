@@ -9,7 +9,10 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 import joblib
+import sys
 
+# Ensure local folder is in python path to resolve sibling imports
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from preprocessing import preprocess_single_input
 
 # Initialize FastAPI App
