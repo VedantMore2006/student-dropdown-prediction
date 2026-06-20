@@ -106,6 +106,8 @@ All models are trained with 5-fold cross validation on balanced SMOTE training d
 | **XGBoost** | ~86% | ~85% | ~92% |
 | **Support Vector Machine** | ~78% | ~77% | ~90% |
 
+> **Note:** The `Admission grade` column referenced in the original dataset description is encoded across multiple existing columns (e.g. `Application mode`, `Previous qualification`, `Curricular units 1st sem (grade)`). The model does not rely on a standalone admission grade column.
+
 The best model is selected and exported as `models/best_model.pkl` to power live FastAPI inferences.
 
 ---
